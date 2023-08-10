@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+
+    <form action="" method="get" enctype="application/x-www-form-urlencoded">
+      <div>
+        <label for="nombre">Nombre: </label>
+        <input
+          required
+          type="text"
+          name="nombre"
+          id="nombre"
+          placeholder="Nombre completo"
+          value="Juan"
+          readonly
+        />
+      </div>
+
+      <div>
+        <label for="password">Contraseña: </label>
+        <input type="password" name="password" id="password" />
+      </div>
+
+      <div>
+        <label for="mensaje">Mensaje: </label>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="5"></textarea>
+      </div>
+
+      <div>
+        <label for="provincia">Provincia: </label>
+        <select name="provincia" id="provincia">
+          <option value=""></option>
+          <option value="ba">Buenos Aires</option>
+          <option value="cb">Cordoba</option>
+          <option value="tu">Tucuman</option>
+        </select>
+      </div>
+
+      <!-- <input type="submit" value="Enviar"> -->
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
