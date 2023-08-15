@@ -1,0 +1,15 @@
+section p {
+  color: red;
+}
+
+.seccion-2 p {
+  color: green;
+}
+
+#articulo-1 .texto p {
+  color: blue;
+}
+
+/* article div p {
+  color: pink;
+} */

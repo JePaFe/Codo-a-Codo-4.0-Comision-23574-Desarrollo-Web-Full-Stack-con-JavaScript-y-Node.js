@@ -1,0 +1,19 @@
+/* section > p {
+  color: red;
+} */
+
+/* h2 + p {
+  color: green;
+} */
+
+/* h2 ~ p {
+  color: blue;
+} */
+
+.item {
+  text-decoration: none;
+}
+
+.item.active {
+  color: red;
+}

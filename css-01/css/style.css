@@ -1,0 +1,24 @@
+* {
+  /* margin: 0; */
+  /* padding: 0; */
+  box-sizing: border-box;
+}
+
+p {
+  color: orange;
+  font-size: 18px;
+}
+
+.parrafo-azul {
+  color: blue;
+}
+
+#parrafo-tres {
+  color: green;
+  /* font-family: "Times New Roman", Times, serif; */
+}
+
+.body-index {
+  font-family: "Courier New", Courier, monospace;
+  color: chartreuse;
+}

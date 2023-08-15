@@ -1,0 +1,12 @@
+p {
+  color: red !important;
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+.parrafo-azul {
+  color: blue;
+}
+
+#parrafo-dos {
+  color: green;
+}

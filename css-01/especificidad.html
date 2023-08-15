@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Especificidad</title>
+    <link rel="stylesheet" href="css/especificidad.css" />
+  </head>
+  <body>
+    <h1>Especificidad</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+    <div>
+      <section>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Saepe, rerum. Pariatur, rerum repudiandae.</p>
+        <p>A suscipit placeat deserunt amet.</p>
+      </section>
+    </div>
+
+    <section class="seccion-2">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Saepe, rerum. Pariatur, rerum repudiandae.</p>
+    </section>
+
+    <article id="articulo-1">
+      <div class="texto">
+        <p>articulo-1</p>
+      </div>
+      <div class="otro-texto">
+        <p>Lorem ipsum dolor sit.</p>
+      </div>
+    </article>
+  </body>
+</html>
