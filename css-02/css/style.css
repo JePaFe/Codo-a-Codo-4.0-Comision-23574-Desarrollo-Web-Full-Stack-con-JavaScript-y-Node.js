@@ -1,0 +1,26 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); */
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 400;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 700;
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+
+body {
+  font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+
+h1 {
+  color: #ff7f50;
+}
+
+p {
+  font-family: Poppins, sans-serif;
+  color: rgb(114, 114, 197);
+}
