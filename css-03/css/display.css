@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  width: 10rem;
+  height: 160px;
+  border: 2px dotted red;
+  font-size: 2em;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.item-2 {
+  /* display: none; */
+  padding: 10px 2em;
+}
+
+a {
+  display: block;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 30px;
+}

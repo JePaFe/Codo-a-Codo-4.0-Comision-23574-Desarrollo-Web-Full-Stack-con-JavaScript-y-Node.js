@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      body {
+        height: 300vh;
+      }
+      .container {
+        background-color: teal;
+        padding: 2em;
+      }
+
+      .cuadrado {
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: 1px solid white;
+        font-size: 2em;
+        color: snow;
+        padding: 0.5em;
+      }
+
+      .cuadrado-fixed {
+        background-color: darkorange;
+        position: fixed;
+        right: 50%;
+        top: 0;
+      }
+      .cuadrado-relative {
+        background-color: darkorange;
+        position: relative;
+        /* left: 100px;
+        top: 50px; */
+      }
+      .cuadrado-absolute {
+        width: 100px;
+        height: 100px;
+        background-color: darkorange;
+        position: absolute;
+        left: 100px;
+        top: 0;
+      }
+      .cuadrado-sticky {
+        background-color: darkorange;
+        position: sticky;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cuadrado cuadrado-relative">1</div>
+      <div class="cuadrado cuadrado-absolute">2</div>
+      <div class="cuadrado">3</div>
+    </div>
+  </body>
+</html>
