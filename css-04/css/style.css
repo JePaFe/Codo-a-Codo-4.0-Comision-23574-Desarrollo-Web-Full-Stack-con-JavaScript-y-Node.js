@@ -1,0 +1,117 @@
+h1 {
+  color: red;
+  /* transition: color 2s, font-size 3s; */
+  transition-property: transform, color, font-size;
+  transition-duration: 2s, 2s, 3s;
+  /* transition-delay: 2s, 1s; */
+  /* transform-origin: center; */
+}
+
+h1:hover {
+  color: aqua;
+  font-size: 3em;
+  transform: rotate(90deg);
+}
+
+h2 {
+  animation-name: color;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes color {
+  from {
+    color: red;
+  }
+  to {
+    color: yellow;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  /* text-decoration: underline; */
+  /* border-bottom: 5px solid green; */
+
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
+}
+
+a:link {
+  color: greenyellow;
+}
+
+a:visited {
+  color: fuchsia;
+}
+
+a:active {
+  color: darkkhaki;
+}
+
+input[type="text"] {
+  /* border-radius: 5px;
+  border: solid green;
+  outline: solid red;
+  outline-offset: 5px; */
+}
+
+input[type="text"]:focus {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: 3px 3px 5px aqua;
+  padding: 5px 10px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: red;
+  box-shadow: 1px 1px 3px red;
+}
+
+/* section p:first-of-type {
+  color: red;
+} */
+
+/* section p:last-child {
+  color: green;
+} */
+
+/* section p:nth-child(even) {
+    color: fuchsia;
+} */
+
+/* section p:nth-of-type(3) {
+    color: fuchsia;
+} */
+
+/* p:first-of-type::first-letter {
+  font-size: 3em;
+  color: fuchsia;
+} */
+
+/* p:first-of-type::first-line {
+  color: fuchsia;
+} */
+
+/* p::selection {
+  background-color: fuchsia;
+  color: beige;
+} */
+
+h1::before {
+  content: "- ";
+  color: aqua;
+}
+
+h1::after {
+  content: "*";
+  color: red;
+}
+
+p::after {
+  content: "...";
+}
