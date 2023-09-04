@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 70px auto 50px;
+  grid-template-areas:
+    "header header"
+    "principal publicidad"
+    "footer footer";
+  gap: 0.25em;
+}
+
+header,
+main,
+aside,
+footer {
+  padding: 1em;
+}
+
+header {
+  background-color: red;
+  /* grid-column: 1 / 3;
+  grid-row: 1; */
+  grid-area: header;
+}
+main {
+  background-color: darkorange;
+  grid-area: principal;
+}
+aside {
+  background-color: green;
+  grid-area: publicidad;
+}
+footer {
+  background-color: blue;
+  /* grid-row: 3;
+  grid-column: 1 / 3; */
+  grid-area: footer;
+}
