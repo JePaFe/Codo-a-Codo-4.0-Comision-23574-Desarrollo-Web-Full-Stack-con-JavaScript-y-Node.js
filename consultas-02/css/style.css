@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+body {
+  margin: 0;
+  min-height: 300vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+article.plomero {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+}
+
+article.plomero div,
+article.plomero picture {
+  flex-basis: 0;
+  flex: 1;
+}
+
+article.plomero img {
+  box-shadow: 3px 3px 5px blue;
+}
+
+ul {
+  list-style-position: outside;
+}
+
+section.banner {
+  padding: 0.5em;
+  background-color: aqua;
+  background-image: url(../img/funkos-banner.webp);
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.lista-productos {
+  background-color: aqua;
+  padding: 0.25em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.lista-productos button {
+  width: 100px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lista-productos button img {
+    filter: hue-rotate(120deg);
+}
