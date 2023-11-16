@@ -1,0 +1,23 @@
+<%- contentFor('title') %> 
+Tareas 
+
+<%- contentFor('main') %>
+<main>
+  <h1>Tareas</h1>
+
+  <h2>Crear Tarea</h2>
+
+  <form action="/" method="post">
+    <div>
+      <label for="title">Nombre: </label>
+      <input type="text" name="title" id="title" />
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <h2>Listado tareas</h2>
+
+  <% tareas.forEach(tarea => { %> 
+    <li><%= tarea.title %></li> 
+  <% }) %>
+</main>

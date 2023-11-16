@@ -1,0 +1,34 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
+h1 {
+  color: darkorange;
+}
+
+body .done {
+  text-decoration: line-through;
+}
+
+.bx-check {
+  color: green;
+  cursor: pointer;
+}
+
+.bx-trash {
+  color: red;
+  cursor: pointer;
+}
+
+form,
+li {
+  display: flex;
+  column-gap: 0.5em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer {
+  margin-top: 1em;
+}
