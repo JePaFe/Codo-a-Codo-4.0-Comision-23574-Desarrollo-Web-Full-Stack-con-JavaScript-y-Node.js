@@ -1,0 +1,10 @@
+<main>
+  <h1>Inicio</h1>
+  <p><%= mensaje %></p>
+
+  <ul>
+    <% productos.forEach(producto => { %>
+    <li><%= producto.nombre %></li>
+    <% }) %>
+  </ul>
+</main>
