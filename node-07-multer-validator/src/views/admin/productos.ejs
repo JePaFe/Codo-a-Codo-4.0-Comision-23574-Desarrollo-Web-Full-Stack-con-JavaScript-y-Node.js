@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
+  </head>
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <h1>Listado de Productos</h1>
+      <p><%= mensaje %></p>
+
+      <ul>
+        <% productos.forEach(producto => { %>
+        <li><%= producto.nombre %></li>
+        <% }) %>
+      </ul>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
