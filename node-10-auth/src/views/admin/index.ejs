@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
+    <link rel="icon" href="/img/logoipsum-282.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <h1>Listado de Productos</h1>
+
+      <a href="/admin/productos/create">Crear</a>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% productos.forEach(producto => { %>
+          <tr>
+            <td><%= producto.id %></td>
+            <td><%= producto.nombre %></td>
+            <td>$ <%= producto.precio %></td>
+            <td>
+              <img
+                width="100"
+                src="/uploads/productos/producto_<%= producto.id %>.jpg"
+                alt="<%= producto.nombre %>"
+              />
+            </td>
+            <td>
+              <a href="/admin/productos/<%= producto.id %>/edit">Editar</a> |
+              Borrar
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
