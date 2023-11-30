@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
+    <link rel="icon" href="/img/logoipsum-282.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <%- include('../../partials/header') %>
+    <main>
+      <h1>Listado de Productos</h1>
+
+      <a href="/admin/productos/create">Crear</a>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+            <th>Imagen</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% productos.forEach(producto => { %>
+          <tr>
+            <td><%= producto.id %></td>
+            <td><%= producto.nombre %></td>
+            <td>$ <%= producto.precio %></td>
+            <td><%= producto.Category.nombre %></td>
+            <td>
+              <img
+                width="100"
+                src="/uploads/productos/producto_<%= producto.id %>.jpg"
+                alt="<%= producto.nombre %>"
+              />
+            </td>
+            <td>
+              <a href="/admin/productos/<%= producto.id %>/edit">Editar</a> |
+              <form
+                class="form-delete"
+                style="display: inline-block"
+                action="/admin/productos/<%= producto.id %>?_method=DELETE"
+                method="post"
+              >
+                <button type="submit">Borrar</button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </main>
+    <%- include('../../partials/footer') %>
+
+    <script>
+      document.addEventListener("submit", (event) => {
+        if (event.target.classList.contains("form-delete")) {
+          event.preventDefault();
+
+          if (confirm("¿Esta seguro?")) {
+            event.target.submit();
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categorías</title>
+    <link rel="stylesheet" href="/css/style.css?num=<%= Date.now() %>" />
+  </head>
+  <body>
+    <%- include('../../partials/header') %>
+    <main>
+      <h1>Edit categoría</h1>
+
+      <% if (typeof errors != 'undefined') { %>
+      <ul>
+        <% errors.forEach(error => { %>
+        <li><%= error.msg %></li>
+        <% }) %>
+      </ul>
+      <% } %>
+
+      <form
+        action="/admin/categorias/<%= values.id %>?_method=PUT"
+        method="post"
+      >
+        <div>
+          <label for="nombre">Nombre: </label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            value="<%= typeof values != 'undefined' ? values.nombre : '' %>"
+          />
+        </div>
+        <button type="submit">Guardar</button>
+      </form>
+    </main>
+    <%- include('../../partials/footer') %>
+  </body>
+</html>

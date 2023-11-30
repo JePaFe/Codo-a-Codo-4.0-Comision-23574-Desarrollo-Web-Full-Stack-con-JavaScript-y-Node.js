@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
+    <link rel="stylesheet" href="/css/style.css?num=<%= Date.now() %>" />
+  </head>
+  <body>
+    <%- include('../../partials/header') %>
+    <main>
+      <h1>Edit Producto</h1>
+
+      <% if (typeof errors != 'undefined') { %>
+      <ul>
+        <% errors.forEach(error => { %>
+        <li><%= error.msg %></li>
+        <% }) %>
+      </ul>
+      <% } %>
+
+      <form
+        action="/admin/productos/<%= values.id %>?_method=PUT"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div>
+          <label for="nombre">Nombre: </label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            value="<%= typeof values != 'undefined' ? values.nombre : '' %>"
+          />
+        </div>
+        <div>
+          <label for="precio">Precio: </label>
+          <input
+            type="number"
+            id="precio"
+            name="precio"
+            value="<%= typeof values != 'undefined' ? values.precio : '' %>"
+          />
+        </div>
+        <div>
+          <label for="CategoryId">Categoria: </label>
+          <select name="CategoryId" id="CategoryId">
+            <option value="" ></option>
+            <% categorias.forEach(categoria => { %>
+            <option value="<%= categoria.id %>" <%= categoria.id == values.CategoryId ? "selected" : "" %> ><%= categoria.nombre %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div>
+          <label for="imagen">Imagen: </label>
+          <input type="file" id="imagen" name="imagen" accept="image/*" />
+          <div>
+            <img
+              width="100"
+              src="/uploads/productos/producto_<%= values.id %>.jpg"
+              alt="<%= values.nombre %>"
+            />
+          </div>
+        </div>
+        <button type="submit">Guardar</button>
+      </form>
+    </main>
+    <%- include('../../partials/footer') %>
+  </body>
+</html>
