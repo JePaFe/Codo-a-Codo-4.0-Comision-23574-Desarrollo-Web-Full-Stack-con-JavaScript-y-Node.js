@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <main>
+      <% productos.forEach(producto => { %>
+      <article>
+        <img
+          src="/uploads/productos/producto_<%= producto.id %>.jpg"
+          alt="<%= producto.nombre %>"
+        />
+        <h2><%= producto.nombre %></h2>
+        <p><%= producto.Category.nombre %></p>
+      </article>
+      <% }) %>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

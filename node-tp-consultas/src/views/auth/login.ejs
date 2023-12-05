@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth</title>
+  </head>
+  <body>
+    <main>
+      <h1>Login</h1>
+
+      <% if (typeof errors != 'undefined') { %>
+      <ul>
+        <% errors.forEach(error => { %>
+        <li><%= error.msg %></li>
+        <% }) %>
+      </ul>
+      <% } %>
+
+      <form action="/login" method="post">
+        <div>
+          <label for="email">Correo</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value="<%= typeof values != 'undefined' ? values.email : '' %>"
+          />
+        </div>
+        <div>
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

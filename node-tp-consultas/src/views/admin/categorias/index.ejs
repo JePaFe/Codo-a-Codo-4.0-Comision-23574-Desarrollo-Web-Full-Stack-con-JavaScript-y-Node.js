@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categorías</title>
+    <link rel="icon" href="/img/logoipsum-282.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <%- include('../../partials/header') %>
+    <main>
+      <h1>Listado de categorías</h1>
+
+      <a href="/admin/categorias/create">Crear</a>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% categorias.forEach(categoria => { %>
+          <tr>
+            <td><%= categoria.id %></td>
+            <td><%= categoria.nombre %></td>
+            <td>
+              <a href="/admin/categorias/<%= categoria.id %>/edit">Editar</a> |
+              <form
+                class="form-delete"
+                style="display: inline-block"
+                action="/admin/categorias/<%= categoria.id %>?_method=DELETE"
+                method="post"
+              >
+                <button type="submit">Borrar</button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </main>
+    <%- include('../../partials/footer') %>
+
+    <script>
+      document.addEventListener("submit", (event) => {
+        if (event.target.classList.contains("form-delete")) {
+          event.preventDefault();
+
+          if (confirm("¿Esta seguro?")) {
+            event.target.submit();
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
