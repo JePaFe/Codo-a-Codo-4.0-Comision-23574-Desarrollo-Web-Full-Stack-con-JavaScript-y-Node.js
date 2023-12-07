@@ -16,6 +16,7 @@
           alt="<%= producto.nombre %>"
         />
         <h2><%= producto.nombre %></h2>
+        <a href="/cart/<%= producto.id %>/add">Agregar carrito</a>
         <p><%= producto.Category.nombre %></p>
       </article>
       <% }) %>

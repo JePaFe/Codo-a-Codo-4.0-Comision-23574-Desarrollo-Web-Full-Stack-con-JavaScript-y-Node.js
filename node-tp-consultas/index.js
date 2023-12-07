@@ -32,6 +32,10 @@ const isLogin = (req, res, next) => {
   next();
 };
 
+const isAdmin = (req, res, next) => {
+  next();
+};
+
 // const online = true;
 
 // app.use((req, res, next) => {
@@ -55,7 +59,7 @@ const mainRoutes = require("./src/routes/mainRoutes");
 app.use(mainRoutes);
 
 const adminCategoriasRoutes = require("./src/routes/admin/categoriasRoutes");
-app.use("/admin/categorias", isLogin, adminCategoriasRoutes);
+app.use("/admin/categorias", isLogin, isAdmin, adminCategoriasRoutes);
 
 const adminProductosRoutes = require("./src/routes/admin/productosRoutes");
 app.use("/admin/productos", isLogin, adminProductosRoutes);
