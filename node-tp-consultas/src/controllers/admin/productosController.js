@@ -60,7 +60,7 @@ const store = async (req, res) => {
         .toFile(
           path.resolve(
             __dirname,
-            `../../../public/uploads/productos/producto_${producto.id}.jpg`
+            `../../../public/uploads/productos/producto_${producto.id}.webp`
           )
         )
         .catch((err) => console.log(err));
